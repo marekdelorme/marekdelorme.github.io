@@ -8,9 +8,9 @@
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background-color: #000;
       color: #ffcc00; /* Yellow text color */
+      font-family: Arial, sans-serif;
     }
 
     .shooting-star {
@@ -21,9 +21,27 @@
       animation: shootingStar 2s linear infinite, flicker 0.1s alternate infinite;
     }
 
-    table, th, td {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
       border: 1px solid white; /* Set the border color to white */
       padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: #ffcc00;
+    }
+
+    caption {
+      font-style: italic;
+      margin: 10px 0;
+      font-size: 18px;
     }
 
     @keyframes shootingStar {
@@ -82,7 +100,7 @@
     </ul>
   </nav>
   <h1><i>Solar System Planets Data</i></h1>
-  <table style="border-collapse: collapse;">
+  <table>
     <caption><i>Table 1:</i>&nbsp; Terrestrial Planets</caption>
     <tr>
       <th>Planet</th>
@@ -145,8 +163,7 @@
       <td>The Red Planet</td>
     </tr>
   </table>
-  <br>
-  <table style="border-collapse: collapse;">
+  <table>
     <caption><i>Table 2:</i>&nbsp; Jovian Gas Planets</caption>
     <tr>
       <th>Planet</th>
@@ -185,10 +202,7 @@
       <td></td>
     </tr>
   </table>
-
-  <br>
-
-  <table style="border-collapse: collapse;">
+  <table>
     <caption><i>Table 3:</i>&nbsp;Jovian Ice Planets</caption>
     <tr>
       <th>Planet</th>
@@ -227,10 +241,7 @@
       <td></td>
     </tr>
   </table>
-
-  <br>
-
-  <table style="border-collapse: collapse;">
+  <table>
     <caption><i>Table 4:</i>&nbsp;Dwarf Planets</caption>
     <tr>
       <th>Planet</th>

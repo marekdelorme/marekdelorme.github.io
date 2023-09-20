@@ -7,101 +7,115 @@
       color: #ffcc00; /* Change to yellow color */
     }
   </style>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #ffcc00; /* Yellow text color */
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .shooting-star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background-color: #fff;
-      animation: shootingStar 2s linear infinite, flicker 0.1s alternate infinite;
-    }
-
-    table {
-      max-width: 80%; /* Adjust the max width as needed */
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-
-    th, td {
-      border: 1px solid white; /* Set the border color to white */
-      padding: 8px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #333;
-      color: #ffcc00;
-    }
-
-    caption {
-      font-style: italic;
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    @keyframes shootingStar {
-      0% {
-        transform: translateX(0) translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(100vw) translateY(100vh);
-        opacity: 0;
-      }
-    }
-
-    @keyframes flicker {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    /* Add star background (you can find star images online and use them) */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('star-background.jpg'); /* Replace with your star background image */
-      opacity: 0.5; /* Adjust the opacity as needed */
-      z-index: -1;
-    }
-  </style>
-</head>
-<body>
-  <!-- JavaScript to create random shooting stars -->
-  <script>
-    function createShootingStar() {
-      const star = document.createElement("div");
-      star.classList.add("shooting-star");
-      star.style.top = `${Math.random() * 100}%`;
-      star.style.left = `${Math.random() * 100}%`;
-      document.body.appendChild(star);
-    }
-
-    // Create a certain number of stars (e.g., 50)
-    for (let i = 0; i < 50; i++) {
-      createShootingStar();
-    }
-  </script>
+    <style>
+        /* Common styles for the entire document */
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          color: #ffcc00;
+          font-family: Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          /* Animate the background image */
+          animation: animateBackground 1s linear infinite;
+          background-size: 100% 100%;
+        }
+    
+        @keyframes animateBackground {
+          0% {
+            background-size: 100% 100%;
+          }
+          50% {
+            background-size: 110% 110%;
+          }
+          100% {
+            background-size: 100% 100%;
+          }
+        }
+    
+        /* Styles for navigation links */
+        nav a {
+          color: #ffcc00;
+        }
+    
+        /* Shooting star animation styles */
+        .shooting-star {
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background-color: #fff;
+          animation: shootingStar 2s linear infinite, flicker 0.1s alternate infinite;
+        }
+    
+        /* Table styles */
+        table {
+          max-width: 80%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+        }
+    
+        th, td {
+          border: 1px solid white;
+          padding: 8px;
+          text-align: center;
+        }
+    
+        th {
+          background-color: #333;
+          color: #ffcc00;
+        }
+    
+        caption {
+          font-style: italic;
+          margin: 10px 0;
+          font-size: 18px;
+        }
+    
+        /* Star background */
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.5;
+          z-index: -1;
+        }
+      </style>
+    </head>
+    <body>
+      <!-- JavaScript to create and animate falling stars -->
+      <script>
+        function createFallingStar() {
+          const star = document.createElement("div");
+          star.classList.add("shooting-star");
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.left = `${Math.random() * 100}%`;
+          document.body.appendChild(star);
+    
+          // Animate the falling star
+          star.animate([
+            { top: '0%', opacity: 1 }, // Start position and opacity
+            { top: '100%', opacity: 0 } // End position and opacity
+          ], {
+            duration: 2000 + Math.random() * 3000, // Random duration between 2 to 5 seconds
+            easing: 'linear',
+            iterations: 10, // Play animation 10
+            fill: 'forwards', // Maintain final position and opacity
+            delay: Math.random() * 5000 // Random delay before starting animation
+          });
+        }
+    
+        // Create more stars
+        for (let i = 0; i < 100; i++) {
+          createFallingStar();
+        }
+      </script>
   <nav>
     <ul>
       <li><a href="index.html">Back to the main page</a></li>

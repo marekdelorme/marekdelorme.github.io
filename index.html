@@ -99,6 +99,23 @@
             padding: 10px 0;
         }
     </style>
+     <script>
+      // Function to update the date in the header
+      function updateHeaderDate() {
+          const headerDate = document.getElementById('header-date');
+          if (headerDate) {
+              const currentDate = new Date();
+              const formattedDate = currentDate.toISOString().slice(0, 10);
+              headerDate.textContent = formattedDate;
+          }
+      }
+
+      // Call the updateHeaderDate function when the page loads
+      window.addEventListener('load', updateHeaderDate);
+
+      // Update the date every 24 hours (in milliseconds)
+      setInterval(updateHeaderDate, 24 * 60 * 60 * 1000);
+  </script>
 </head>
 <body>
     <nav>
@@ -112,11 +129,11 @@
     <header>
         <h1>Best Website Out There</h1>
         <h3>Marek Delorme</h3>
-        <h3>2023-09-20</h3>
+        <h3 id="header-date">2023-09-21</h3>
     </header>
     <main>
         <section>
-            <h3>i want dog</h3>
+            <h3>dog below</h3>
             <p>This is an image to make your day:</p>
             <img src="https://i.pinimg.com/1200x/0b/3d/d5/0b3dd574b617c37ff90023b75c452a44.jpg" width="100" height="100" alt="A cute image">
         </section>

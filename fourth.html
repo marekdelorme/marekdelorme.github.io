@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FatCat</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            background-color: #3498db;
+        }
+
+        .card-back {
+            background-color: #e74c3c;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://static.vecteezy.com/system/resources/previews/023/373/559/large_2x/ai-generated-cute-fat-cat-hugs-fat-cat-in-nature-background-photo.jpg">FatCat</a></li>
+        </ul>
+    </nav>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">Front</div>
+            <div class="card-back">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/373/559/large_2x/ai-generated-cute-fat-cat-hugs-fat-cat-in-nature-background-photo.jpg" alt="FatCat">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

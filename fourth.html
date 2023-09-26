@@ -6,8 +6,8 @@
     <title>FatCat</title>
     <style>
         .card {
-            width: 200px;
-            height: 300px;
+            width: 600px;
+            height: 400px;
             perspective: 1000px;
         }
 
@@ -37,6 +37,12 @@
         .card-back {
             background-color: #e74c3c;
             transform: rotateY(180deg);
+        }
+
+        /* Adjust the size of the cat picture */
+        .card-back img {
+            width: 100%; /* You can adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>

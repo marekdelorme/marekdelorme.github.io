@@ -1,306 +1,154 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
-  <title>PlanetData</title>
-  <style>
-    nav a {
-      color: #ffcc00; /* Change to yellow color */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Marek</title>
     <style>
-        /* Common styles for the entire document */
+            
         body {
-          margin: 0;
-          padding: 0;
-          background-color: #000;
-          color: #ffcc00;
-          font-family: Arial, sans-serif;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: 100vh;
-          /* Animate the background image */
-          animation: animateBackground 1s linear infinite;
-          background-size: 100% 100%;
+            /* Setting initial background color */
+            background-color: #3498db;
+            /* Applying CSS animation */
+            animation: colorChange 10s infinite alternate;
+            margin: 0; /* Reset default margin */
         }
-    
-        @keyframes animateBackground {
-          0% {
-            background-size: 100% 100%;
-          }
-          50% {
-            background-size: 110% 110%;
-          }
-          100% {
-            background-size: 100% 100%;
-          }
+
+        /* Defining animation */
+        @keyframes colorChange {
+            0% {
+                background-color: #3498db;
+            }
+
+            25% {
+                background-color: #e74c3c;
+            }
+
+            50% {
+                background-color: #2ecc71;
+            }
+
+            75% {
+                background-color: #f1c40f;
+            }
+
+            100% {
+                background-color: #3498db;
+            }
         }
-    
-        /* Styles for navigation links */
-        nav a {
-          color: #ffcc00;
-        }
-    
-        /* Shooting star animation styles */
-        .shooting-star {
-          position: absolute;
-          width: 2px;
-          height: 2px;
-          background-color: #fff;
-          animation: shootingStar 2s linear infinite, flicker 0.1s alternate infinite;
-        }
-    
-        /* Table styles */
-        table {
-          max-width: 80%;
-          border-collapse: collapse;
-          margin-bottom: 20px;
-        }
-    
-        th, td {
-          border: 1px solid white;
-          padding: 8px;
-          text-align: center;
-        }
-    
-        th {
-          background-color: #333;
-          color: #ffcc00;
-        }
-    
-        caption {
-          font-style: italic;
-          margin: 10px 0;
-          font-size: 18px;
-        }
-    
-        /* Star background */
+
+        /* Centering content */
         body::before {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0.5;
-          z-index: -1;
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
-      </style>
-    </head>
-    <body>
-      <!-- JavaScript to create and animate falling stars -->
-      <script>
-        function createFallingStar() {
-          const star = document.createElement("div");
-          star.classList.add("shooting-star");
-          star.style.top = `${Math.random() * 100}%`;
-          star.style.left = `${Math.random() * 100}%`;
-          document.body.appendChild(star);
-    
-          // Animate the falling star
-          star.animate([
-            { top: '0%', opacity: 1 }, // Start position and opacity
-            { top: '100%', opacity: 0 } // End position and opacity
-          ], {
-            duration: 2000 + Math.random() * 3000, // Random duration between 2 to 5 seconds
-            easing: 'linear',
-            iterations: 10, // Play animation 10
-            fill: 'forwards', // Maintain final position and opacity
-            delay: Math.random() * 5000 // Random delay before starting animation
-          });
+
+        /* My website content styles */
+        .content {
+            text-align: center;
+            padding: 100px;
+            color: #fff;
         }
-    
-        // Create more stars
-        for (let i = 0; i < 100; i++) {
-          createFallingStar();
+
+        /* Style for the navigation menu */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
         }
-      </script>
-  <nav>
-    <ul>
-      <li><a href="index.html">Back to the main page</a></li>
-    </ul>
-  </nav>
-  <h1><i>Solar System Planets Data</i></h1>
-  <table>
-    <caption><i>Table 1:</i>&nbsp; Terrestrial Planets</caption>
-    <tr>
-      <th>Planet</th>
-      <th>Mass (x10^24kg)</th>
-      <th>Diameter (km)</th>
-      <th>Density (kg/m^3)</th>
-      <th>Gravity (m/s^2)</th>
-      <th>Length of Day (hours)</th>
-      <th>Distance From Sun (x10^6km)</th>
-      <th>Average Temperature (°C)</th>
-      <th>Number of Moons</th>
-      <th>Notes</th>
-    </tr>
-    <tr>
-      <td>Mercury</td>
-      <td>0.330</td>
-      <td>4879</td>
-      <td>5427</td>
-      <td>3.7</td>
-      <td>4222.6</td>
-      <td>57.9</td>
-      <td>167</td>
-      <td>0</td>
-      <td>Closest to the Sun</td>
-    </tr>
-    <tr>
-      <td>Venus</td>
-      <td>4.87</td>
-      <td>12104</td>
-      <td>5243</td>
-      <td>8.9</td>
-      <td>2802.0</td>
-      <td>108.2</td>
-      <td>464</td>
-      <td>0</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Earth</td>
-      <td>5.97</td>
-      <td>12756</td>
-      <td>5514</td>
-      <td>9.8</td>
-      <td>24</td>
-      <td>149.6</td>
-      <td>15</td>
-      <td>1</td>
-      <td>Our Planet</td>
-    </tr>
-    <tr>
-      <td>Mars</td>
-      <td>0.642</td>
-      <td>6792</td>
-      <td>3933</td>
-      <td>3.7</td>
-      <td>24.7</td>
-      <td>227.9</td>
-      <td>-65</td>
-      <td>2</td>
-      <td>The Red Planet</td>
-    </tr>
-  </table>
-  <table>
-    <caption><i>Table 2:</i>&nbsp; Jovian Gas Planets</caption>
-    <tr>
-      <th>Planet</th>
-      <th>Mass (x10^24kg)</th>
-      <th>Diameter (km)</th>
-      <th>Density (kg/m^3)</th>
-      <th>Gravity (m/s^2)</th>
-      <th>Length of Day (hours)</th>
-      <th>Distance From Sun (x10^6km)</th>
-      <th>Average Temperature (°C)</th>
-      <th>Number of Moons</th>
-      <th>Notes</th>
-    </tr>
-    <tr>
-      <td>Jupiter</td>
-      <td>1898</td>
-      <td>142984</td>
-      <td>1326</td>
-      <td>23.1</td>
-      <td>9.9</td>
-      <td>778.6</td>
-      <td>-110</td>
-      <td>67</td>
-      <td>The largest planet</td>
-    </tr>
-    <tr>
-      <td>Saturn</td>
-      <td>568</td>
-      <td>120536</td>
-      <td>687</td>
-      <td>9.0</td>
-      <td>10.7</td>
-      <td>1433.5</td>
-      <td>-140</td>
-      <td>62</td>
-      <td></td>
-    </tr>
-  </table>
-  <table>
-    <caption><i>Table 3:</i>&nbsp;Jovian Ice Planets</caption>
-    <tr>
-      <th>Planet</th>
-      <th>Mass (x10^24kg)</th>
-      <th>Diameter (km)</th>
-      <th>Density (kg/m^3)</th>
-      <th>Gravity (m/s^2)</th>
-      <th>Length of Day (hours)</th>
-      <th>Distance From Sun (x10^6km)</th>
-      <th>Average Temperature (°C)</th>
-      <th>Number of Moons</th>
-      <th>Notes</th>
-    </tr>
-    <tr>
-      <td>Uranus</td>
-      <td>86.8</td>
-      <td>51118</td>
-      <td>1271</td>
-      <td>8.7</td>
-      <td>17.2</td>
-      <td>2872.5</td>
-      <td>-195</td>
-      <td>27</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Neptune</td>
-      <td>102</td>
-      <td>49528</td>
-      <td>1638</td>
-      <td>11.0</td>
-      <td>16.1</td>
-      <td>4495.1</td>
-      <td>-200</td>
-      <td>14</td>
-      <td></td>
-    </tr>
-  </table>
-  <table>
-    <caption><i>Table 4:</i>&nbsp;Dwarf Planets</caption>
-    <tr>
-      <th>Planet</th>
-      <th>Mass (x10^24kg)</th>
-      <th>Diameter (km)</th>
-      <th>Density (kg/m^3)</th>
-      <th>Gravity (m/s^2)</th>
-      <th>Length of Day (hours)</th>
-      <th>Distance From Sun (x10^6km)</th>
-      <th>Average Temperature (°C)</th>
-      <th>Number of Moons</th>
-      <th>Notes</th>
-    </tr>
-    <tr>
-      <td>Pluto</td>
-      <td>0.0146</td>
-      <td>2370</td>
-      <td>2095</td>
-      <td>0.7</td>
-      <td>153.3</td>
-      <td>5906.4</td>
-      <td>-225</td>
-      <td>5</td>
-      <td>Declassified as a planet in 2006, but this remains controversial</td>
-    </tr>
-    <tr>
-      <td>Ceres</td>
-      <td>0.000938</td>
-      <td>939</td>
-      <td>2162</td>
-      <td>0.284</td>
-      <td>9.1</td>
-      <td>413</td>
-      <td>-105</td>
-      <td>0</td>
-      <td></td>
-    </tr>
-  </table>
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main content container */
+        main {
+            padding: 20px;
+        }
+
+        /* Article styles */
+        article {
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+     <script>
+      // Function to update the date in the header
+      function updateHeaderDate() {
+          const headerDate = document.getElementById('header-date');
+          if (headerDate) {
+              const currentDate = new Date();
+              const formattedDate = currentDate.toISOString().slice(0, 10);
+              headerDate.textContent = formattedDate;
+          }
+      }
+
+      // Call the updateHeaderDate function when the page loads
+      window.addEventListener('load', updateHeaderDate);
+
+      // Update the date every 24 hours (in milliseconds)
+      setInterval(updateHeaderDate, 24 * 60 * 60 * 1000);
+  </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="third.html">Planet Data</a></li>
+            <li><a href="second.html">Random</a></li>
+            <li><a href="fourth.html">FatCat</a></li>
+            <li><a href="https://ddztmb1ahc6o7.cloudfront.net/kippscott/wp-content/uploads/2023/07/05153223/KADIN_PATON.jpg">This is my friend Kadin</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Best Website Out There</h1>
+        <h3>Marek Delorme</h3>
+        <h3 id="header-date">2023-09-21</h3>
+    </header>
+    <main>
+        <section>
+            <h3>dog below</h3>
+            <p>This is an image to make your day:</p>
+            <img src="https://i.pinimg.com/1200x/0b/3d/d5/0b3dd574b617c37ff90023b75c452a44.jpg" width="100" height="100" alt="A cute image">
+        </section>
+<br>
+        <article>
+            <h3>adorable</h3>
+            <header>About the Developer</header>
+            <p>My name is Marek Delorme</p>
+            <p>I work out six days a week, never had a <b>pet</b> and do not know what else to write here.</p>
+        </article>
+
+    </main>
+    <footer>This is the end of the page.</footer>
 </body>
 </html>

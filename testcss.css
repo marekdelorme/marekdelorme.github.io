@@ -1,10 +1,108 @@
+/* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
+}
+
+/* Header */
+header {
+    background-image: url('header-image.jpg'); /* Replace with your header image path */
+    background-size: cover;
+    background-position: center;
+    height: 115px; /* Reduced height for a more minimalist look */
+    text-align: center;
+    color: white;
+    padding-top: 100px; /* Adjusted padding for vertical centering */
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Reduced top and bottom padding for a cleaner look */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff0066;
+}
+
+/* Main Content */
+.container {
+    max-width: 960px; /* Set a maximum width for content */
+    margin: 0 auto; /* Center align content */
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+/* About Myself Section */
+.section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Skills Section */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects .project {
+    margin-bottom: 20px;
+}
+
+.projects .project h3 {
+    font-size: 18px;
+}
+
+/* CSS animation background */
+body {
     background: linear-gradient(45deg, #ff0066, #6600ff, #00ff66, #ff6600);
     background-size: 400% 400%;
     animation: gradient 10s infinite;
@@ -22,14 +120,13 @@ body {
     }
 }
 
-h1 {
-    font-size: 3em;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center; /* Center-align navigation links on small screens */
+    }
 }
-h5 {
-    color:white;
-}
+
 
 /* styles.css for fatcat*/
 .card {

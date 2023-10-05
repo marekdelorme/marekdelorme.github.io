@@ -4,56 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pages</title>
-    <link rel="stylesheet" href="testcss.css"> <!-- Include the same CSS file as in your portfolio -->
+    <link rel="stylesheet" href="testcss.css">
     <style>
-        /* Add any additional CSS or styles if needed */
-        body {
-            font-family: 'Times New Roman', Times, serif;
+        /* Reset some default styles */
+        body, h1, ul, li {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
+
+        /* General Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            color: white;
+            overflow: hidden;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            background-color: #3498db;
+        }
+
+        .back-to-main {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Page Heading */
         h1 {
             font-size: 36px;
-            margin: 0;
             text-align: center;
             background-color: #333;
             color: #fff;
             padding: 10px 0;
-            width: 100%;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        li a:hover {
-            color: #3498db; /* Change the link color on hover */
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Pages Section</h1>
-    <ul>
-        <li><a href="PlanetData.html">Planet Data</a></li>
-        <li><a href="">Random</a></li>
-        <li><a href="fourth.html">FatCat</a></li>
-        <li><a href="https://ddztmb1ahc6o7.cloudfront.net/kippscott/wp-content/uploads/2023/07/05153223/KADIN_PATON.jpg">This is my friend Kadin</a></li>
-    </ul>
-    <!-- Add more links as needed -->
+    <div class="navbar">
+        <h1>Welcome to the Pages Section</h1>
+        <ul>
+            <li><a class="back-to-main" href="index.html">Back to Main Page</a></li>
+            <li><a href="PlanetData.html">Planet Data</a></li>
+            <li><a href="#">Random</a></li>
+            <li><a href="fourth.html">Cat</a></li>
+            <li><a href="https://ddztmb1ahc6o7.cloudfront.net/kippscott/wp-content/uploads/2023/07/05153223/KADIN_PATON.jpg">Kadin</a></li>
+        </ul>
+    </div>
+    <!-- Add more content as needed -->
 </body>
 </html>

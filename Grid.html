@@ -13,8 +13,8 @@
             background-color: #1a1a1a;
             color: #fff;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
             min-height: 100vh;
         }
 
@@ -25,6 +25,7 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         .box {
@@ -35,6 +36,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .box:hover {
@@ -47,35 +49,47 @@
             font-size: 1.2em;
             margin-top: 10px;
         }
+        
+        .footer {
+            text-align: center;
+        }
+        
+        .back-link {
+            text-decoration: none;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
-            <h2>Math Magic</h2>
-            <p class="fact">Mathematics is the language of the universe.</p>
-        </div>
-        <div class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
-            <h2>Artistic Expressions</h2>
-            <p class="fact">Art allows us to express what words cannot.</p>
-        </div>
-        <div class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
-            <h2>Exploring History</h2>
-            <p class="fact">The past shapes our understanding of the present and future.</p>
-        </div>
-        <div class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
-            <h2>Science Wonders</h2>
-            <p class="fact">Science is the key to unlocking the mysteries of the world.</p>
-        </div>
-        <div class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
-            <h2>Musical Harmony</h2>
-            <p class="fact">Music transcends boundaries and connects souls.</p>
-        </div>
-        <div class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
-            <h2>Literary Adventures</h2>
-            <p class="fact">In books, you can explore countless worlds and ideas.</p>
-        </div>
+        <a href="index.html" class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
+            <h2>Creating Grid Layouts</h2>
+            <p class="fact">Grid Layouts provide a powerful way to create complex layouts in CSS.</p>
+        </a>
+        <a href="#" class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
+            <h2>Precise Element Control</h2>
+            <p class="fact">Grid Layouts allow for precise control of elements in a grid-like structure.</p>
+        </a>
+        <a href="#" class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
+            <h2>Responsive Design Made Easy</h2>
+            <p class="fact">Grid Layouts simplify the design of responsive and flexible web pages.</p>
+        </a>
+        <a href="#" class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
+            <h2>CSS Grid Properties</h2>
+            <p class="fact">Grid Layouts work seamlessly with CSS Grid properties and values.</p>
+        </a>
+        <a href="#" class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
+            <h2>Enhance Web Design Skills</h2>
+            <p class "fact">Mastering Grid Layouts enhances your web design skills and possibilities.</p>
+        </a>
+        <a href="#" class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
+            <h2>Stunning Web Layouts</h2>
+            <p class="fact">Explore the world of CSS Grid Layouts and create stunning web layouts.</p>
+        </a>
+    </div>
+    <div class="footer">
+        <a class="back-link" href="index.html">Back to Main Page</a>
     </div>
 </body>
 

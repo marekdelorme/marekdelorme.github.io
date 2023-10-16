@@ -13,6 +13,7 @@
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0; /* Match the background color */
         }
         header {
             background-color: #333;
@@ -70,6 +71,26 @@
             border: 1px solid #ccc;
             padding: 10px;
         }
+        /* Flexbox Styles */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #f0f0f0; /* Match the background color */
+            margin: 0 auto;
+            max-width: 960px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .flex-item {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +116,7 @@
         <div class="container">
             <section id="about">
                 <h2>About Me</h2>
-                <p>Hello, I'm Marek. I'm a first-year computer programmer with a passion for coding and problem-solving. My experience is listed below with my skills/capabilities but you will learn to find I enjoy creating efficient software solutions. I strive to have a honoured track record of delivering high-quality code and collaborating effectively in development teams. I'm excited to contribute my skills to cutting-edge software projects while maintaining professionalism and technical excellence. Check out the current projects I am working on down below as well!</p>
+                <p>Hello, I'm Marek. I'm a first-year computer programmer with a passion for coding and problem-solving. My experience is listed below with my skills/capabilities, but you will learn to find I enjoy creating efficient software solutions. I strive to have a honored track record of delivering high-quality code and collaborating effectively in development teams. I'm excited to contribute my skills to cutting-edge software projects while maintaining professionalism and technical excellence. Check out the current projects I am working on down below as well!</p>
             </section>
             <section id="skills">
                 <h2>Skills: Technical</h2>
@@ -133,33 +154,33 @@
                 </div>
                 <div class="project">
                     <h3>Project 2</h3>
-                    <p>Small encyclopedia, no link yet still work in progess</p>
+                    <p>Small encyclopedia, no link yet still work in progress</p>
                 </div>
                 <!-- Add projects here -->
             </section>
-            <section id="media">
-                <h2>Media</h2>
-                <p>Explore my media presence:</p>
+        </div>
+    </main>
+    <footer>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Media</h3>
                 <ul>
                     <li><a href="#">Media Link 1</a></li>
                     <li><a href="#">Media Link 2</a></li>
                     <li><a href="#">Media Link 3</a></li>
                     <!-- Add media links or content here -->
                 </ul>
-            </section>
-            <section id="contact">
-                <h2>Contact Info</h2>
+            </div>
+            <div class="flex-item">
+                <h3>Contact Info</h3>
                 <ul>
                     <li>Email: marekdelorme29@outlook.com</li>
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/marek-delorme-326883272/">LinkedIn Profile</a></li>
                     <li>GitHub: <a href="https://github.com/marekdelorme/marekdelorme.github.io">GitHub Profile</a></li>
                     <!-- Add more social media links or contact information as needed -->
                 </ul>
-            </section>
+            </div>
         </div>
-    </main>
-    <footer>
-        <!-- ... (footer content) ... -->
     </footer>
 </body>
 </html>

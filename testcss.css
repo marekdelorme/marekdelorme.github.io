@@ -8,7 +8,7 @@ body {
 
 /* Header */
 header {
-    background-image: url('header-image.jpg'); /* Replace with your header image path */
+    background-image: url('header-image.jpg'); /* Replace with header image path */
     background-size: cover;
     background-position: center;
     height: 115px; /* Reduced height for a more minimalist look */
@@ -125,40 +125,4 @@ body {
     nav ul {
         text-align: center; /* Center-align navigation links on small screens */
     }
-}
-
-
-/* styles.css for fatcat*/
-.card {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.card-inner {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    background-color: #3498db;
-}
-
-.card-back {
-    background-color: #e74c3c;
-    transform: rotateY(180deg);
 }

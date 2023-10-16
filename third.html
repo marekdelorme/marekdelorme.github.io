@@ -1,154 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Marek</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox</title>
     <style>
-            
         body {
-            /* Setting initial background color */
-            background-color: #3498db;
-            /* Applying CSS animation */
-            animation: colorChange 10s infinite alternate;
-            margin: 0; /* Reset default margin */
-        }
-
-        /* Defining animation */
-        @keyframes colorChange {
-            0% {
-                background-color: #3498db;
-            }
-
-            25% {
-                background-color: #e74c3c;
-            }
-
-            50% {
-                background-color: #2ecc71;
-            }
-
-            75% {
-                background-color: #f1c40f;
-            }
-
-            100% {
-                background-color: #3498db;
-            }
-        }
-
-        /* Centering content */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        /* My website content styles */
-        .content {
-            text-align: center;
-            padding: 100px;
-            color: #fff;
-        }
-
-        /* Style for the navigation menu */
-        nav {
-            background-color: #333;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        /* Header styles */
         header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Main content container */
-        main {
-            padding: 20px;
-        }
-
-        /* Article styles */
-        article {
-            margin-bottom: 20px;
-        }
-
-        /* Footer styles */
-        footer {
-            text-align: center;
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            flex: 1; /* Grow and take remaining space */
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .flex-item {
+            background-color: #41B883;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
         }
     </style>
-     <script>
-      // Function to update the date in the header
-      function updateHeaderDate() {
-          const headerDate = document.getElementById('header-date');
-          if (headerDate) {
-              const currentDate = new Date();
-              const formattedDate = currentDate.toISOString().slice(0, 10);
-              headerDate.textContent = formattedDate;
-          }
-      }
-
-      // Call the updateHeaderDate function when the page loads
-      window.addEventListener('load', updateHeaderDate);
-
-      // Update the date every 24 hours (in milliseconds)
-      setInterval(updateHeaderDate, 24 * 60 * 60 * 1000);
-  </script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="third.html">Planet Data</a></li>
-            <li><a href="second.html">Random</a></li>
-            <li><a href="fourth.html">FatCat</a></li>
-            <li><a href="https://ddztmb1ahc6o7.cloudfront.net/kippscott/wp-content/uploads/2023/07/05153223/KADIN_PATON.jpg">This is my friend Kadin</a></li>
-        </ul>
-    </nav>
     <header>
-        <h1>Best Website Out There</h1>
-        <h3>Marek Delorme</h3>
-        <h3 id="header-date">2023-09-21</h3>
+        <h1>Flexbox Example</h1>
     </header>
-    <main>
-        <section>
-            <h3>dog below</h3>
-            <p>This is an image to make your day:</p>
-            <img src="https://i.pinimg.com/1200x/0b/3d/d5/0b3dd574b617c37ff90023b75c452a44.jpg" width="100" height="100" alt="A cute image">
-        </section>
-<br>
-        <article>
-            <h3>adorable</h3>
-            <header>About the Developer</header>
-            <p>My name is Marek Delorme</p>
-            <p>I work out six days a week, never had a <b>pet</b> and do not know what else to write here.</p>
-        </article>
 
+    <main>
+        <div class="flex-container">
+            <div class="flex-item"><a href="index.html">Main Page</a></div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
     </main>
-    <footer>This is the end of the page.</footer>
+
+    <footer>
+        <p>© 2023 My Flexbox</p>
+    </footer>
 </body>
 </html>

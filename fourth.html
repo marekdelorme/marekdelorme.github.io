@@ -1,64 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FatCat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Grid Showcase</title>
     <style>
-        .card {
-            width: 600px;
-            height: 400px;
-            perspective: 1000px;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .card-inner {
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .card:hover .card-inner {
-            transform: rotateY(180deg);
+        .box {
+            border-radius: 10px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            color: #000;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+            cursor: pointer;
         }
 
-        .card-front,
-        .card-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
+        .box:hover {
+            transform: scale(1.05);
         }
 
-        .card-front {
-            background-color: #3498db;
-        }
-
-        .card-back {
-            background-color: #e74c3c;
-            transform: rotateY(180deg);
-        }
-
-        /* Adjust the size of the cat picture */
-        .card-back img {
-            width: 100%; /* You can adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
+        .fact {
+            font-style: italic;
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Back Home</a></li>
-        </ul>
-    </nav>
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">Front</div>
-            <div class="card-back">
-                <img src="https://static.vecteezy.com/system/resources/previews/023/373/559/large_2x/ai-generated-cute-fat-cat-hugs-fat-cat-in-nature-background-photo.jpg" alt="FatCat">
-            </div>
+    <div class="container">
+        <div class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
+            <h2>Math Magic</h2>
+            <p class="fact">Mathematics is the language of the universe.</p>
+        </div>
+        <div class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
+            <h2>Artistic Expressions</h2>
+            <p class="fact">Art allows us to express what words cannot.</p>
+        </div>
+        <div class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
+            <h2>Exploring History</h2>
+            <p class="fact">The past shapes our understanding of the present and future.</p>
+        </div>
+        <div class="box" style="background: linear-gradient(to bottom, #FF5733, #FFD733);">
+            <h2>Science Wonders</h2>
+            <p class="fact">Science is the key to unlocking the mysteries of the world.</p>
+        </div>
+        <div class="box" style="background: linear-gradient(to bottom, #33FF57, #33B5FF);">
+            <h2>Musical Harmony</h2>
+            <p class="fact">Music transcends boundaries and connects souls.</p>
+        </div>
+        <div class="box" style="background: linear-gradient(to bottom, #41B883, #1383D7);">
+            <h2>Literary Adventures</h2>
+            <p class="fact">In books, you can explore countless worlds and ideas.</p>
         </div>
     </div>
 </body>
+
 </html>
